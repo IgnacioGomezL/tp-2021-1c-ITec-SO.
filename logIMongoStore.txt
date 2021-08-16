@@ -1,0 +1,1 @@
+07/08/21 13:43:22:	Se cierra correctamente el modulo iMongoStore.

@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------------------------------------
+Dump: 07/08/21 12:03:56:345
+Marco: 0	Estado: Ocupado	Proceso: 2	Pagina: 0	Libre: 4b	Instante: 1383986	Clock: 1	InfoMarco: [P: 8b, X: 10b, X: 10b]
+Marco: 1	Estado: Libre	Proceso: -	Pagina: -	Libre: 32b	Instante: -	Clock: -	InfoMarco: -
+Marco: 2	Estado: Libre	Proceso: -	Pagina: -	Libre: 32b	Instante: -	Clock: -	InfoMarco: -
+Marco: 3	Estado: Libre	Proceso: -	Pagina: -	Libre: 32b	Instante: -	Clock: -	InfoMarco: -
+------------------------------------------------------------------------------------------------------------

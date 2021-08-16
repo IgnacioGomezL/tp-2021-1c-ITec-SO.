@@ -1,0 +1,49 @@
+==10201== Memcheck, a memory error detector
+==10201== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10201== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==10201== Command: ./Debug/Mi_Ram_HQ
+==10201== Parent PID: 10200
+==10201== 
+==10201== Warning: client switching stacks?  SP change: 0x5ed91e0 --> 0xf335fe70
+==10201==          to suppress, use: --max-stackframe=314020720 or greater
+==10201== Thread 2:
+==10201== Use of uninitialised value of size 4
+==10201==    at 0x48510B3: puedeEntrar (miRamUtils.c:438)
+==10201== 
+==10201== 
+==10201== Process terminating with default action of signal 11 (SIGSEGV)
+==10201==  Access not within mapped region at address 0xF335FE64
+==10201==    at 0x48510B3: puedeEntrar (miRamUtils.c:438)
+==10201==  If you believe this happened as a result of a stack
+==10201==  overflow in your program's main thread (unlikely but
+==10201==  possible), you can try to increase the size of the
+==10201==  main thread stack using the --main-stacksize= flag.
+==10201==  The main thread stack size used in this run was 8388608.
+--10201-- VALGRIND INTERNAL ERROR: Valgrind received a signal 11 (SIGSEGV) - exiting
+--10201-- si_code=1;  Faulting address: 0xF335FE64;  sp: 0x64c82f18
+
+valgrind: the 'impossible' happened:
+   Killed by fatal signal
+
+host stacktrace:
+==10201==    at 0x5803F9F6: ??? (in /usr/lib/valgrind/memcheck-x86-linux)
+
+sched status:
+  running_tid=2
+
+Thread 2: status = VgTs_Runnable (lwpid 10232)
+==10201==    at 0x482A4D0: _vgnU_freeres (in /usr/lib/valgrind/vgpreload_core-x86-linux.so)
+
+
+Note: see also the FAQ in the source distribution.
+It contains workarounds to several common problems.
+In particular, if Valgrind aborted or crashed after
+identifying problems in your program, there's a good chance
+that fixing those problems will prevent Valgrind aborting or
+crashing, especially if it happened in m_mallocfree.c.
+
+If that doesn't help, please report this bug to: www.valgrind.org
+
+In the bug report, send all the above text, the valgrind
+version, and what OS and version you are using.  Thanks.
+
